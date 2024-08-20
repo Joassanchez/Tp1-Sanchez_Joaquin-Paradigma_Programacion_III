@@ -16,6 +16,7 @@ header {
 nav {
     background-color: #3949AB;
     overflow: hidden;
+    
 }
 
 nav a {
@@ -34,6 +35,9 @@ nav a:hover {
 .container {
     padding: 20px;
     margin-bottom: 60px; 
+}
+.p {
+    padding: 20px; 
 }
 
 .responsive {
@@ -58,17 +62,14 @@ footer {
 form {
     max-width: 600px;
     margin: 0 auto;
-}
-
-form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
+
 form input,
-form select,
-form textarea {
+form select{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -86,10 +87,6 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #3949AB;
-}
-
 .producto {
     border: 1px solid #ddd;
     padding: 10px;
@@ -97,21 +94,6 @@ form button:hover {
     text-align: center;
 }
 
-.producto h3 {
-    font-size: 1.5em;
-    color: #1A237E;
-}
-
-.producto img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.producto p {
-    font-size: 1.2em;
-    color: #333;
-}
 
 .btn-comprar {
     display: inline-block;
