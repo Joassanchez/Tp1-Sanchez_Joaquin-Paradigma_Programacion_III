@@ -1,0 +1,21 @@
+@import url(/styles/Pags/comprar.css);
+@import url(/styles/Pags/equipos.css);
+@import url(/styles/Pags/historia.css);
+@import url(/styles/Pags/resultados.css);
+@import url(/styles/Pags/tienda.css);
+@import url(/styles/components/fotter.css);
+@import url(/styles/components/nav.css);
+@import url(/styles/components/container.css);
+@import url(/styles/Pags/index.css);
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text-color);
+
+  }
