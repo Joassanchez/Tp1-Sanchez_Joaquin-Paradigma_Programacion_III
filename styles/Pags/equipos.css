@@ -16,7 +16,6 @@
     border: 1px solid #ddd; /* Borde alrededor de cada equipo */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    background-color: #fff; /* Fondo blanco */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
 }
 
