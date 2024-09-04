@@ -1,3 +1,4 @@
+@import url(../root.css);
 .equipos-grid {
     display: flex;
     flex-wrap: wrap;

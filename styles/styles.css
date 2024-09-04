@@ -1,12 +1,12 @@
-@import url(/styles/Pags/comprar.css);
-@import url(/styles/Pags/equipos.css);
-@import url(/styles/Pags/historia.css);
-@import url(/styles/Pags/resultados.css);
-@import url(/styles/Pags/tienda.css);
-@import url(/styles/components/fotter.css);
-@import url(/styles/components/nav.css);
-@import url(/styles/components/container.css);
-@import url(/styles/Pags/index.css);
+@import url(./Pags/comprar.css);
+@import url(./Pags/equipos.css);
+@import url(./Pags/historia.css);
+@import url(./Pags/resultados.css);
+@import url(./Pags/tienda.css);
+@import url(./components/fotter.css);
+@import url(./components/nav.css);
+@import url(./components/container.css);
+@import url(./Pags/index.css);
 
 body {
     font-family: Arial, sans-serif;

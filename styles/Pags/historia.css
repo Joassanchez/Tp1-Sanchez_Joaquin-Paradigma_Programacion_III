@@ -1,4 +1,5 @@
 /* Sección Historia */
+@import url(../root.css);
 .historia {
     width: 60%;
     background-color: var(--border-color); /* Fondo gris claro */

@@ -1,4 +1,6 @@
- /* Formularios */
+
+@import url(../root.css);
+/* Formularios */
  form {
   max-width: 600px;
   margin: 0 auto 20px;
