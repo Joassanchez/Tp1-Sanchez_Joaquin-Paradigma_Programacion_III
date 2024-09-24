@@ -10,10 +10,12 @@
 <body>
     <!-- Encabezado del sitio web con título y barra de navegación -->
     <header>
-        <h1>Fútbol Argentino</h1>
+        <div class="header-content">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <h1>Fútbol Argentino</h1>
+        </div>
         <nav class="Nav">
-            <ul class="barra_navegacion">
-                <!-- Enlaces de navegación a otras páginas del sitio -->
+            <ul class="barra_navegacion" id="barra_navegacion">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./equipos.html">Equipos</a></li>
                 <li><a href="./resultados.html">Resultados</a></li>
@@ -90,5 +92,7 @@
     <footer>
         <p>&copy; 2024 Fútbol Argentino - Creado por Sanchez Joaquin</p>
     </footer>
+    <script src="../JS/components/navbar.js"></script>
+
 </body>
 </html>

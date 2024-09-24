@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <!-- Encabezado de la página con el título y la barra de navegación -->
     <header>
-        <h1>Fútbol Argentino</h1>
+        <div class="header-content">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <h1>Fútbol Argentino</h1>
+        </div>
         <nav class="Nav">
-            <ul class="barra_navegacion">
-                <!-- Enlaces de navegación a otras páginas del sitio -->
+            <ul class="barra_navegacion" id="barra_navegacion">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./equipos.html">Equipos</a></li>
                 <li><a href="./resultados.html">Resultados</a></li>
@@ -40,21 +41,21 @@
                     <p>Precio: $159.999 ARS</p>
                     <!-- Botones para comprar el producto y para ver más detalles -->
                     <a href="./comprar.html" class="btn-comprar">Comprar</a>
-                    <a href="./Productos/Camiseta.html" class="btn-verMas">Ver Mas</a>
+                    <a href="./Camiseta.html" class="btn-verMas">Ver Mas</a>
                 </div>
                 <div class="product-box">
                     <img src="../img/Productos/short.jpg" alt="Short Selección Argentina">
                     <h3>Short Selección Argentina</h3>
                     <p>Precio: $99.999 ARS</p>
                     <a href="./comprar.html" class="btn-comprar">Comprar</a>
-                    <a href="./Productos/Short.html" class="btn-verMas">Ver Mas</a>
+                    <a href="./Short.html" class="btn-verMas">Ver Mas</a>
                 </div>
                 <div class="product-box">
                     <img src="../img/Productos/pelota.jpg" alt="Pelota AFA">
                     <h3>Pelota AFA</h3>
                     <p>Precio: $44.999 ARS</p>
                     <a href="./comprar.html" class="btn-comprar">Comprar</a>
-                    <a href="./Productos/Pelota.html" class="btn-verMas">Ver Mas</a>
+                    <a href="./Pelota.html" class="btn-verMas">Ver Mas</a>
                 </div>
             </article>
     </main>
@@ -63,5 +64,8 @@
     <footer>
         <p>2024 Fútbol Argentino - Creado por Sanchez Joaquin</p>
     </footer>
+    <script src="../JS/components/navbar.js"></script>
+
 </body>
+
 </html>

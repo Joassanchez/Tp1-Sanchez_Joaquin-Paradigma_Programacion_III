@@ -9,10 +9,12 @@
 
 <body>
     <header>
-        <h1>Fútbol Argentino</h1>
+        <div class="header-content">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <h1>Fútbol Argentino</h1>
+        </div>
         <nav class="Nav">
-            <ul class="barra_navegacion">
-                <!-- Enlaces de navegación a otras páginas del sitio -->
+            <ul class="barra_navegacion" id="barra_navegacion">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./equipos.html">Equipos</a></li>
                 <li><a href="./resultados.html">Resultados</a></li>
@@ -21,12 +23,14 @@
             </ul>
         </nav>
     </header>
-
+    
+    
 
     <main>
         <section class ="container">
             <h2>Posiciones de la Liga Profesional de Argentina 2024</h2>
             <article >
+                <input type="text" id="filtroEquipo" placeholder="Buscar equipo...">
                 <table class="table">
                     <thead>
                         <tr>
@@ -47,7 +51,7 @@
                             <td>1</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Huracan.png" alt="Logo Huracán">
+                                    <img src="../img/EscudosFutbol/Huracan.png" alt="Logo Huracán">
                                     <span>Huracán</span>
                                 </div>
                             </td>
@@ -64,7 +68,7 @@
                             <td>2</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Union.png" alt="Logo Unión">
+                                    <img src="../img/EscudosFutbol/Union.png" alt="Logo Unión">
                                     <span>Unión (Santa Fe)</span>
                                 </div>
                             </td>
@@ -81,7 +85,7 @@
                             <td>3</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/AtleticoTucuman.png" alt="Logo Atlético Tucumán">
+                                    <img src="../img/EscudosFutbol/AtleticoTucuman.png" alt="Logo Atlético Tucumán">
                                     <span>Atlético Tucumán</span>
                                 </div>
                             </td>
@@ -98,7 +102,7 @@
                             <td>4</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Velez.png" alt="Logo Vélez Sarsfield">
+                                    <img src="../img/EscudosFutbol/Velez.png" alt="Logo Vélez Sarsfield">
                                     <span>Vélez Sarsfield</span>
                                 </div>
                             </td>
@@ -115,7 +119,7 @@
                             <td>5</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Racing.png" alt="Logo Racing Club">
+                                    <img src="../img/EscudosFutbol/Racing.png" alt="Logo Racing Club">
                                     <span>Racing Club</span>
                                 </div>
                             </td>
@@ -132,7 +136,7 @@
                             <td>6</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Talleres.png" alt="Logo Talleres">
+                                    <img src="../img/EscudosFutbol/Talleres.png" alt="Logo Talleres">
                                     <span>Talleres (Córdoba)</span>
                                 </div>
                             </td>
@@ -149,7 +153,7 @@
                             <td>7</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Instituto.png" alt="Logo Instituto">
+                                    <img src="../img/EscudosFutbol/Instituto.png" alt="Logo Instituto">
                                     <span>Instituto (Córdoba)</span>
                                 </div>
                             </td>
@@ -166,7 +170,7 @@
                             <td>8</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/BocaJuniors.png" alt="Logo Boca Juniors">
+                                    <img src="../img/EscudosFutbol/BocaJuniors.png" alt="Logo Boca Juniors">
                                     <span>Boca Juniors</span>
                                 </div>
                             </td>
@@ -183,7 +187,7 @@
                             <td>9</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/RiverPlate.png" alt="Logo River Plate">
+                                    <img src="../img/EscudosFutbol/RiverPlate.png" alt="Logo River Plate">
                                     <span>River Plate</span>
                                 </div>
                             </td>
@@ -200,7 +204,7 @@
                             <td>10</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Lanus.png" alt="Logo Lanús">
+                                    <img src="../img/EscudosFutbol/Lanus.png" alt="Logo Lanús">
                                     <span>Lanús</span>
                                 </div>
                             </td>
@@ -217,7 +221,7 @@
                             <td>11</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Belgrano.png" alt="Logo Belgrano">
+                                    <img src="../img/EscudosFutbol/Belgrano.png" alt="Logo Belgrano">
                                     <span>Belgrano (Córdoba)</span>
                                 </div>
                             </td>
@@ -234,7 +238,7 @@
                             <td>12</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/EstudiantesLP.png" alt="Logo Estudiantes">
+                                    <img src="../img/EscudosFutbol/EstudiantesLP.png" alt="Logo Estudiantes">
                                     <span>Estudiantes de La Plata</span>
                                 </div>
                             </td>
@@ -251,7 +255,7 @@
                             <td>13</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/RosarioCentral.png" alt="Logo Rosario Central">
+                                    <img src="../img/EscudosFutbol/RosarioCentral.png" alt="Logo Rosario Central">
                                     <span>Rosario Central</span>
                                 </div>
                             </td>
@@ -268,7 +272,7 @@
                             <td>14</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/GodoyCruz.png" alt="Logo Godoy Cruz">
+                                    <img src="../img/EscudosFutbol/GodoyCruz.png" alt="Logo Godoy Cruz">
                                     <span>Godoy Cruz Antonio Tomba</span>
                                 </div>
                             </td>
@@ -285,7 +289,7 @@
                             <td>15</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/IndependienteRivadavia.png" alt="Logo Independiente Rivadavia">
+                                    <img src="../img/EscudosFutbol/IndependienteRivadavia.png" alt="Logo Independiente Rivadavia">
                                     <span>Independiente Rivadavia</span>
                                 </div>
                             </td>
@@ -302,7 +306,7 @@
                             <td>16</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/DeportivoRiestra.png" alt="Logo Deportivo Riestra">
+                                    <img src="../img/EscudosFutbol/DeportivoRiestra.png" alt="Logo Deportivo Riestra">
                                     <span>Deportivo Riestra</span>
                                 </div>
                             </td>
@@ -319,7 +323,7 @@
                             <td>17</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/GimnasiaLP.png" alt="Logo Gimnasia">
+                                    <img src="../img/EscudosFutbol/GimnasiaLP.png" alt="Logo Gimnasia">
                                     <span>Gimnasia La Plata</span>
                                 </div>
                             </td>
@@ -336,7 +340,7 @@
                             <td>18</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Independiente.png" alt="Logo Independiente">
+                                    <img src="../img/EscudosFutbol/Independiente.png" alt="Logo Independiente">
                                     <span>Independiente</span>
                                 </div>
                             </td>
@@ -353,7 +357,7 @@
                             <td>19</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Sarmiento.png" alt="Logo Sarmiento">
+                                    <img src="../img/EscudosFutbol/Sarmiento.png" alt="Logo Sarmiento">
                                     <span>Sarmiento (Junín)</span>
                                 </div>
                             </td>
@@ -370,7 +374,7 @@
                             <td>20</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/ArgentinosJuniors.png" alt="Logo Argentinos Juniors">
+                                    <img src="../img/EscudosFutbol/ArgentinosJuniors.png" alt="Logo Argentinos Juniors">
                                     <span>Argentinos Juniors</span>
                                 </div>
                             </td>
@@ -387,7 +391,7 @@
                             <td>21</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Platense.png" alt="Logo Platense">
+                                    <img src="../img/EscudosFutbol/Platense.png" alt="Logo Platense">
                                     <span>Platense</span>
                                 </div>
                             </td>
@@ -404,7 +408,7 @@
                             <td>22</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Newells.png" alt="Logo Newell's">
+                                    <img src="../img/EscudosFutbol/Newells.png" alt="Logo Newell's">
                                     <span>Newell's Old Boys</span>
                                 </div>
                             </td>
@@ -421,7 +425,7 @@
                             <td>23</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Banfield.png" alt="Logo Banfield">
+                                    <img src="../img/EscudosFutbol/Banfield.png" alt="Logo Banfield">
                                     <span>Banfield</span>
                                 </div>
                             </td>
@@ -438,7 +442,7 @@
                             <td>24</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/Tigre.png" alt="Logo Tigre">
+                                    <img src="../img/EscudosFutbol/Tigre.png" alt="Logo Tigre">
                                     <span>Tigre</span>
                                 </div>
                             </td>
@@ -455,7 +459,7 @@
                             <td>25</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/BarracasCentral.png" alt="Logo Barracas Central">
+                                    <img src="../img/EscudosFutbol/BarracasCentral.png" alt="Logo Barracas Central">
                                     <span>Barracas Central</span>
                                 </div>
                             </td>
@@ -472,7 +476,7 @@
                             <td>26</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/DefensaJusticia.png" alt="Logo Defensa y Justicia">
+                                    <img src="../img/EscudosFutbol/DefensaJusticia.png" alt="Logo Defensa y Justicia">
                                     <span>Defensa y Justicia</span>
                                 </div>
                             </td>
@@ -489,7 +493,7 @@
                             <td>27</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/SanLorenzo.png" alt="Logo San Lorenzo">
+                                    <img src="../img/EscudosFutbol/SanLorenzo.png" alt="Logo San Lorenzo">
                                     <span>San Lorenzo</span>
                                 </div>
                             </td>
@@ -506,7 +510,7 @@
                             <td>28</td>
                             <td>
                                 <div class="equipo">
-                                    <img src="/img/EscudosFutbol/CentralCordoba.png" alt="Logo Central Cordoba">
+                                    <img src="../img/EscudosFutbol/CentralCordoba.png" alt="Logo Central Cordoba">
                                     <span>Central Cordoba</span>
                                 </div>
                             </td>
@@ -527,6 +531,9 @@
     <footer>
         <p> 2024 Fútbol Argentino - Creado por Sanchez Joaquin</p>
     </footer>
+    <script src="../JS/resultados.js"></script>
+    <script src="../JS/components/navbar.js"></script>
+
 </body>
 </html>
 

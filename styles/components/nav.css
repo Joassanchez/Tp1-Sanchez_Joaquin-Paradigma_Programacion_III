@@ -16,6 +16,9 @@ header {
     justify-content: space-around;
     padding: 10px 20px;
     align-items: center;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 80px; /* Cambia según sea necesario */
 }
 
 .barra_navegacion a , .barra_navegacion li{
@@ -35,5 +38,25 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.menu-icon {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Ocultar por defecto */
+    text-align: left;
+}
 
+@media (max-width: 768px) {
+    .barra_navegacion {
+        display: block; /* Cambia a bloque */
+        max-height: 0; /* Oculta inicialmente */
+    }
 
+    .barra_navegacion.show {
+        max-height: 300px; /* Ajusta según el número de elementos */
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar el icono de hamburguesa */
+    }
+}
