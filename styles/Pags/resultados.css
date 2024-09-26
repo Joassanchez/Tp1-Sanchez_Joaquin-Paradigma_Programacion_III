@@ -34,3 +34,30 @@
 .Espaciado{
   width: 350px;
 }
+
+
+
+@media(max-width: 768px) {
+  /* Ocultar columnas innecesarias */
+  .table th:nth-child(4), /* Columna G */
+  .table th:nth-child(5), /* Columna E */
+  .table th:nth-child(6), /* Columna P */
+  .table th:nth-child(7), /* Columna GF */
+  .table th:nth-child(8), /* Columna GC */
+  .table th:nth-child(9), /* Columna DIF */
+  .table td:nth-child(4),
+  .table td:nth-child(5),
+  .table td:nth-child(6),
+  .table td:nth-child(7),
+  .table td:nth-child(8),
+  .table td:nth-child(9) {
+    display: none;
+  }
+
+  /* Ajustar el tamaño de las columnas visibles */
+  .table .equipo {
+    width: 100%; /* Ocupar todo el ancho disponible */
+  }
+
+  
+}

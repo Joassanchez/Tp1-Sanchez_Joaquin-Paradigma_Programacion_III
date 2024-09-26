@@ -3,10 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 30px;
+
 }
+
 
 .equipo {
     width: 45%;
@@ -55,3 +55,11 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    
+    .equipo {
+        width: 100%;  
+        padding: 3px;
+    }
+
+}
