@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Filtrado de equipos
+document.addEventListener('DOMContentLoaded', function () {
+    
     const filtroInput = document.getElementById('filtroEquipo');
 
     filtroInput.addEventListener('input', function() {
@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         filas.forEach(fila => {
             const nombreEquipo = fila.querySelector('.equipo span').textContent.toLowerCase();
             if (nombreEquipo.includes(filtro)) {
-                fila.style.display = ''; // Mostrar la fila
+                fila.style.display = ''; 
             } else {
-                fila.style.display = 'none'; // Ocultar la fila
+                fila.style.display = 'none'; 
             }
         });
     });
