@@ -1,9 +1,18 @@
 
 @import url(../root.css);
 /* Formularios */
- form {
+.comprar{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 
-  max-width: 650px;
+}
+
+
+
+form {
+  width: 80%;
   margin: 0 auto 20px;
 }
 
@@ -15,8 +24,10 @@ form label {
 
 form input,
 form select {
-  width: 100%;
+  
+  width: auto;
   padding: 10px;
+  margin: 0;
   margin-bottom: 20px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
