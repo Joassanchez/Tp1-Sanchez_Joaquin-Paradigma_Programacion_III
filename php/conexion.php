@@ -2,10 +2,10 @@
 function conectar()
 {
 	global $con;
-	$username = "localhost";
+	$username = "root";
 	$password = "root";
 	$db = "web_futbol";
-	$host = "local@host";
+	$host = "local@host:3306";
 
 	$con = mysqli_connect($host, $username, $password, $db);
 	/* comprobar la conexión */
