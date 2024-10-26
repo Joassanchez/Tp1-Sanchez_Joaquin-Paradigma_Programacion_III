@@ -1,3 +1,26 @@
+<?php
+    include '../php/conexion.php'; 
+
+    function obtenerGaleria()
+    {
+
+        global $con;
+        $consulta = "SELECT img, titulo, descripcion FROM noticias WHERE estatus = 'Activo'";
+        $result = mysqli_query($con, $consulta); 
+
+        $imagenes = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $imagenes[] = $row;
+        }
+        return $imagenes;
+    }
+
+    // Conectar a la base de datos
+    conectar();
+    $imagenes = obtenerGaleria();
+    desconectar();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,6 +51,12 @@
         <section class="container">
           <h2>Noticias Recientes</h2>
           <div id="contenedor-noticias" class="noticias-grid"></div>
+          <?php
+            // Renderizar noticias
+            while ($noticia = mysqli_fetch_assoc($result)) {
+                echo model_noticias($noticia);
+            }
+            ?>
         </section>
     </main>
 
