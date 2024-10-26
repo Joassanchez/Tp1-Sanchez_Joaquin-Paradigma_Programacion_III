@@ -249,7 +249,7 @@
     },
  
     {
-      "posicion": 21,
+      "posicion": 20,
       "equipo": "Barracas Central",
       "escudo": "../img/EscudosFutbol/BarracasCentral.png",
       "jugados": 11,
@@ -262,7 +262,7 @@
       "puntos": 8
     },
     {
-      "posicion": 23,
+      "posicion": 21,
       "equipo": "San Lorenzo",
       "escudo": "../img/EscudosFutbol/SanLorenzo.png",
       "jugados": 11,
@@ -275,7 +275,7 @@
       "puntos": 6
     },
     {
-      "posicion": 24,
+      "posicion": 22,
       "equipo": "Defensa y Justicia",
       "escudo": "../img/EscudosFutbol/DefensaJusticia.png",
       "jugados": 11,

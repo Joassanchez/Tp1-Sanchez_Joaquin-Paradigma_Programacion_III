@@ -7,3 +7,4 @@ componenteNoticia();
 componentePosiciones();
 navbar();
 componenteEquipos();
+

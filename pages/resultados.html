@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fútbol Argentino - Resultados</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    
+    <!-- Añadir CSS de DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -23,14 +26,11 @@
             </ul>
         </nav>
     </header>
-    
-    
 
     <main>
-        <section class ="container">
+        <section class="container">
             <h2>Posiciones de la Liga Profesional de Argentina 2024</h2>
-            <article >
-                <input type="text" id="filtroEquipo" placeholder="Buscar equipo...">
+            <article>
                 <table class="table">
                     <thead>
                         <tr>
@@ -47,19 +47,21 @@
                         </tr>
                     </thead>
                     <tbody id="contenedor-posiciones">
-
-
+                        <!-- Aquí irán los datos de los equipos -->
                     </tbody>
                 </table>
             </article>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Fútbol Argentino - Creado por Sanchez Joaquin</p>
     </footer>
     
-    <script type= "module" src="../JS/main.js"></script>
-
+    <!-- Añadir jQuery y DataTables -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    
+    <script type="module" src="../JS/main.js"></script>
 </body>
 </html>
-
