@@ -9,6 +9,7 @@
 @import url(./Pags/index.css);
 @import url(./components/formularios.css);
 @import url(./Pags/login.css);
+@import url(./Pags/admin.css);
 
 body {
     font-family: Arial, sans-serif;
