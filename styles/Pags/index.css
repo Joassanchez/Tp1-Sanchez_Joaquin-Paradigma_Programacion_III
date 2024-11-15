@@ -1,0 +1,66 @@
+/* Estilos para la sección de noticias */
+@import url(../root.css);
+
+/* Contenedor principal para las noticias */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Disposición flexible para la grid */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Contenedor de cada noticia */
+.noticia {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px; /* Añadido padding para separarlo de los bordes */
+}
+
+/* Estilo de la imagen de la noticia */
+.noticia img {
+    width: 100%;
+    height: 250px; /* Ajusta la altura a lo que necesites */
+    object-fit: cover;
+    border-radius: 8px; /* Opcional: para bordes redondeados */
+}
+
+
+/* Contenido dentro de la noticia (título y descripción) */
+.noticia-content {
+    padding: 15px;
+}
+
+/* Título de la noticia */
+.noticia h3 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333; /* Título ligeramente más oscuro */
+    font-weight: bold;
+}
+
+/* Descripción de la noticia */
+.noticia p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6; /* Mejora la legibilidad al aumentar el interlineado */
+}
+
+/* Efecto hover para la noticia */
+.noticia:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Efecto de sombra más fuerte */
+}
+
+
+/* Asegurarse de que las noticias no se sobrepongan en pantallas pequeñas */
+@media (max-width: 768px) {
+    .noticias-grid {
+        grid-template-columns: 1fr; /* Hacer una columna en dispositivos pequeños */
+    }
+}

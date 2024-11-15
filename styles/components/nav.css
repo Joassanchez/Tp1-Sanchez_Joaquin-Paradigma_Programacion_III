@@ -1,0 +1,85 @@
+/* Aseguramos que el header y la barra de navegación estén alineados correctamente */
+header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+}
+
+/* Barra de navegación */
+.barra_navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 60px; /* Espacio debajo del header */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Barra de navegación encima del contenido */
+}
+
+/* Estilo para los items de la barra de navegación */
+.barra_navegacion li {
+    list-style: none;
+}
+
+/* Estilos para los enlaces de navegación */
+.barra_navegacion a {
+    text-decoration: none;
+    color: var(--background-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para los enlaces */
+.barra_navegacion a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(1.05); /* Sutil efecto de zoom */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el icono del menú (hamburguesa) */
+.menu-icon {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Asegura que el icono de menú siempre esté visible */
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+    .barra_navegacion {
+        display: none; /* Ocultamos inicialmente el menú */
+        top: 100px; /* Espacio debajo del header */
+        left: 0;
+    }
+
+    .barra_navegacion.show {
+        display: block; /* Mostrar el menú cuando la clase "show" se agrega */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar el icono de hamburguesa */
+    }
+
+    .barra_navegacion ul {
+       
+        gap: 10px;
+        width: 100%; /* Ajustar el ancho */
+        text-align: center; /* Centrar los elementos */
+    }
+
+    
+}

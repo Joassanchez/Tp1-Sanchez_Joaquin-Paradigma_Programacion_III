@@ -1,0 +1,111 @@
+/* Estilos generales para todos los formularios */
+.formulario {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.formulario h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los contenedores de cada campo */
+.campo {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas de los campos */
+.campo label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Estilos para los campos de entrada (input, textarea) */
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo textarea,
+.campo input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.campo textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Estilo para el campo de imagen (previsualización) */
+.campo img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botón de envío */
+.boton-enviar {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.boton-enviar:hover {
+    background-color: #0056b3;
+}
+
+.boton-enviar:active {
+    background-color: #003d7a;
+}
+
+/* Estilos para los campos de error */
+.campo input:invalid,
+.campo textarea:invalid {
+    border-color: red;
+}
+
+.campo input:valid,
+.campo textarea:valid {
+    border-color: green;
+}
+
+/* Estilos para los campos enfocados */
+.campo input[type="text"]:focus,
+.campo textarea:focus,
+.campo input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Mensajes de error (si los necesitas) */
+.mensaje-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Mensajes de éxito */
+.mensaje-exito {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}

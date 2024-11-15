@@ -1,0 +1,25 @@
+/* Aseguramos de tener los estilos básicos que necesitas */
+@import url(../root.css);
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px; /* Establece el tamaño máximo */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 20px; /* Espaciado interno (padding) para dar espacio alrededor del contenido */
+    width: 100%; /* Asegura que el contenedor no tenga un ancho fijo, sino que se ajuste */
+}
+
+/* Estilos para los encabezados dentro de .container */
+.header-content h1, .container h2 {
+    text-align: center; /* Centra los títulos */
+    margin-bottom: 20px; /* Espaciado inferior entre los encabezados y el siguiente contenido */
+    font-size: 2rem; /* Ajuste de tamaño de fuente */
+}
+
+/* Si se quiere evitar cualquier espaciado adicional en los títulos en pequeños dispositivos */
+@media (max-width: 768px) {
+    .container h1, .container h2 {
+        font-size: 1.5rem; /* Ajuste de tamaño de fuente en dispositivos más pequeños */
+        margin-bottom: 10px; /* Menos espacio inferior en pantallas pequeñas */
+    }
+}

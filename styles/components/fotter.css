@@ -1,0 +1,11 @@
+@import url(../root.css);
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 10px 0; 
+  position: relative;
+  width: 100%;
+  clear: both; 
+  box-sizing: border-box;
+}

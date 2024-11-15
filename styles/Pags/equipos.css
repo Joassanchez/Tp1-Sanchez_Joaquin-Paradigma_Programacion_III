@@ -1,0 +1,67 @@
+@import url(../root.css);
+
+.equipos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.equipo {
+    width: 45%;
+    display: flex;
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 20px; /* Aumentado el padding para dar más espacio dentro de la tarjeta */
+    border: 1px solid #ddd; /* Borde alrededor de cada equipo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+    text-align: center; /* Centramos el contenido */
+}
+
+.equipo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.equipo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.equipos p {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    margin-top: 15px; /* Añadido margen superior para dar espacio entre el nombre y la ciudad */
+}
+
+.equipo h3 {
+    margin: 0;
+    font-size: 22px; /* Aumentado el tamaño de fuente del nombre */
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 15px; /* Añadido margen inferior para separar el nombre de la ciudad */
+    text-transform: uppercase; /* Opcional: poner el nombre en mayúsculas */
+}
+
+.equipo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.equipos h2 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .equipo {
+        width: 100%;  
+        padding: 10px; /* Ajustado el padding para pantallas más pequeñas */
+    }
+}

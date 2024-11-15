@@ -1,0 +1,52 @@
+@import url(./Pags/comprar.css);
+@import url(./Pags/equipos.css);
+@import url(./Pags/historia.css);
+@import url(./Pags/resultados.css);
+@import url(./Pags/tienda.css);
+@import url(./components/fotter.css);
+@import url(./components/nav.css);
+@import url(./components/container.css);
+@import url(./Pags/index.css);
+@import url(./components/formularios.css);
+@import url(./Pags/login.css);
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+  }
+
+
+
+.contenedor-centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 20px 20px; /* Ajuste de espacio superior */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+
+/* Evitar que el contenido se desborde en módulos con mucho contenido */
+.contenedor-centrado > section > * {
+    overflow: hidden; /* Evita el desbordamiento de contenido */
+}
+
+@media (max-width: 768px) {
+    .contenedor-centrado {
+        padding-top: 120px; /* Ajuste adicional en pantallas pequeñas */
+    }
+}
