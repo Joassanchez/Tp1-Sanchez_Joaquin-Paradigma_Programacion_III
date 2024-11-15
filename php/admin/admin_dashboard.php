@@ -5,7 +5,7 @@ session_start();
 
 // Verificar si el usuario es administrador
 if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin') {
-    header("Location: ../index.php"); // Redirigir si no es admin
+    header("Location: ../../index.php"); // Redirigir si no es admin
     exit();
 }
 ?>
@@ -27,7 +27,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin') {
             <a href="admin_dashboard.php?modulo=usuarios">Usuarios</a>
             <a href="admin_dashboard.php?modulo=noticias">Noticias</a>
             <a href="admin_dashboard.php?modulo=equipos">Equipos</a>
-            <a href="../logout.php">Cerrar sesión</a>
+            <a href="../components/logout.php">Cerrar sesión</a>
         </div>
 
         <!-- Contenido dinámico -->

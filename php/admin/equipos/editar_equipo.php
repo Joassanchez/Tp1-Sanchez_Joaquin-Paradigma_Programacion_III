@@ -80,20 +80,30 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<h2>Editar Equipo</h2>
-<form method="POST" enctype="multipart/form-data" action="">
-    <label for="nombre">Nombre del Equipo:</label>
-    <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
+<div class="contenedor-centrado">
+    <h2>Editar Equipo</h2>
+    <form method="POST" enctype="multipart/form-data" class="formulario">
+        <div class="campo">
+            <label for="nombre">Nombre del Equipo:</label>
+            <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
+        </div>
 
-    <label for="ciudad">Ciudad:</label>
-    <input type="text" id="ciudad" name="ciudad" value="<?php echo htmlspecialchars($ciudad); ?>" required>
+        <div class="campo">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" value="<?php echo htmlspecialchars($ciudad); ?>" required>
+        </div>
 
-    <label for="img">Imagen (Logo):</label>
-    <input type="file" id="img" name="img" accept="image/jpeg, image/png, image/gif">
+        <div class="campo">
+            <label for="img">Imagen (Logo):</label>
+            <input type="file" id="img" name="img" accept="image/jpeg, image/png, image/gif">
+        </div>
 
-    <?php if ($img_actual): ?>
-        <p><strong>Imagen actual:</strong> <img src="<?php echo htmlspecialchars($img_actual); ?>" style="width: 50px;" alt="Logo"></p>
-    <?php endif; ?>
+        <?php if ($img_actual): ?>
+            <div class="campo">
+                <p><strong>Imagen actual:</strong> <img src="../../<?php echo htmlspecialchars($img_actual); ?>" style="width: 50px;" alt="Logo"></p>
+            </div>
+        <?php endif; ?>
 
-    <button type="submit">Guardar Cambios</button>
-</form>
+        <button type="submit" class="boton-enviar">Guardar Cambios</button>
+    </form>
+</div>

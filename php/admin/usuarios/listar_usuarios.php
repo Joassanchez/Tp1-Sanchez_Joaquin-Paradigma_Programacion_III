@@ -52,13 +52,13 @@ $result = mysqli_query($con, $query);
                 <td><?php echo htmlspecialchars($row['email']); ?></td>
                 <td><?php echo $row['id_rol'] == 1 ? 'Admin' : 'Usuario'; ?></td>
                 <td>
-                    <a href="admin_dashboard.php?modulo=usuarios&accion=editar&id=<?php echo $row['id']; ?>">Editar</a>
+                    <a href="admin_dashboard.php?modulo=usuarios&accion=editar&id=<?php echo $row['id']; ?>" class="boton boton-editar">Editar</a>
                     <a href="admin_dashboard.php?modulo=usuarios&eliminar=<?php echo $row['id']; ?>" 
-                       onclick="return confirm('¿Seguro que deseas eliminar este usuario?')">Eliminar</a>
+                       class="boton boton-eliminar" onclick="return confirm('¿Seguro que deseas eliminar este usuario?')">Eliminar</a>
                 </td>
             </tr>
         <?php endwhile; ?>
     </tbody>
 </table>
 
-<a href="admin_dashboard.php?modulo=usuarios&accion=crear" class="boton">Crear Usuario</a>
+<a href="admin_dashboard.php?modulo=usuarios&accion=crear" class="boton boton-crear">Crear Usuario</a>

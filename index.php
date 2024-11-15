@@ -1,5 +1,6 @@
 <?php
 include './php/utils/conexion.php';
+session_start();
 conectar();
 ?>
 <!DOCTYPE html>

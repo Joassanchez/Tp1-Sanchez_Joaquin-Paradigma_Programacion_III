@@ -2,63 +2,56 @@
 include '../utils/conexion.php';
 conectar();
 
+// Comprobamos si se ha enviado el formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = mysqli_real_escape_string($con, $_POST['nombre']);
     $ciudad = mysqli_real_escape_string($con, $_POST['ciudad']);
+    $estatus = isset($_POST['estatus']) ? 1 : 0;
 
-    // Subir la imagen
+    // Subida de la imagen (logo del equipo)
+    $img = '';
     if (isset($_FILES['img']) && $_FILES['img']['error'] == 0) {
-        $img_tmp = $_FILES['img']['tmp_name'];  // El archivo temporal
-        $img_name = $_FILES['img']['name'];  // El nombre original del archivo
-        $img_type = $_FILES['img']['type'];  // Tipo de archivo
-        $img_size = $_FILES['img']['size'];  // Tamaño del archivo
+        $target_dir = "uploads/equipos/";  // Carpeta donde se guardarán las imágenes
+        $target_file = $target_dir . basename($_FILES["img"]["name"]);
+        move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+        $img = $target_file; // Asignamos la ruta de la imagen
+    }
 
-        // Verificar si el archivo es una imagen (esto es básico, puede ser mejorado)
-        $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
-        if (!in_array($img_type, $allowed_types)) {
-            echo "<p class='error'>Solo se permiten imágenes (JPG, PNG, GIF).</p>";
-        } else {
-            // Definir el directorio donde se almacenará la imagen
-            $upload_dir = '../uploads/equipos/';
-            // Crear el directorio si no existe
-            if (!is_dir($upload_dir)) {
-                mkdir($upload_dir, 0777, true);
-            }
-
-            // Crear un nombre único para la imagen para evitar conflictos
-            $img_new_name = uniqid() . '-' . basename($img_name);
-            $img_path = $upload_dir . $img_new_name;
-
-            // Mover el archivo al directorio
-            if (move_uploaded_file($img_tmp, $img_path)) {
-                // Insertar el equipo en la base de datos con la ruta de la imagen
-                $sql_insert = "INSERT INTO equipos (nombre, ciudad, img, estatus) VALUES ('$nombre', '$ciudad', '$img_path', 1)";
-                if (mysqli_query($con, $sql_insert)) {
-                    header("Location: admin_dashboard.php?modulo=equipos&accion=listar&success=equipo_creado");
-                    exit();
-                } else {
-                    echo "<p class='error'>Error al crear el equipo: " . mysqli_error($con) . "</p>";
-                }
-            } else {
-                echo "<p class='error'>Error al subir la imagen.</p>";
-            }
-        }
+    // Insertar el equipo en la base de datos
+    $query = "INSERT INTO equipos (nombre, img, ciudad, estatus) 
+              VALUES ('$nombre', '$img', '$ciudad', '$estatus')";
+    if (mysqli_query($con, $query)) {
+        header("Location: admin_dashboard.php?modulo=equipos&accion=listar&success=equipo_creado");
+        exit();
     } else {
-        echo "<p class='error'>Por favor, selecciona una imagen para el equipo.</p>";
+        echo "<p class='error'>Error al crear el equipo: " . mysqli_error($con) . "</p>";
     }
 }
 ?>
 
-<h2>Crear Nuevo Equipo</h2>
-<form method="POST" enctype="multipart/form-data" action="">
-    <label for="nombre">Nombre del Equipo:</label>
-    <input type="text" id="nombre" name="nombre" required>
+<div class="contenedor-centrado">
+    <h2>Crear Nuevo Equipo</h2>
+    <form method="POST" enctype="multipart/form-data" class="formulario">
+        <div class="campo">
+            <label for="nombre">Nombre del Equipo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
 
-    <label for="ciudad">Ciudad:</label>
-    <input type="text" id="ciudad" name="ciudad" required>
+        <div class="campo">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+        </div>
 
-    <label for="img">Imagen (Logo):</label>
-    <input type="file" id="img" name="img" accept="image/jpeg, image/png, image/gif" required>
+        <div class="campo">
+            <label for="img">Imagen (Logo):</label>
+            <input type="file" id="img" name="img">
+        </div>
 
-    <button type="submit">Crear Equipo</button>
-</form>
+        <div class="campo">
+            <label for="estatus">Activo:</label>
+            <input type="checkbox" id="estatus" name="estatus" checked> 
+        </div>
+
+        <button type="submit" class="boton-enviar">Crear Equipo</button>
+    </form>
+</div>

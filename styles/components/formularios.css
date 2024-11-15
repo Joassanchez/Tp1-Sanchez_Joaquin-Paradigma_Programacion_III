@@ -6,9 +6,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 700px;
     margin: 20px auto;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
 }
 
+/* Título del formulario */
 .formulario h2 {
     text-align: center;
     font-size: 24px;
@@ -16,12 +18,12 @@
     margin-bottom: 20px;
 }
 
-/* Estilo para los contenedores de cada campo */
+/* Contenedores de cada campo del formulario */
 .campo {
     margin-bottom: 15px;
 }
 
-/* Estilos para las etiquetas de los campos */
+/* Estilo para las etiquetas de los campos */
 .campo label {
     display: block;
     font-size: 16px;
@@ -41,14 +43,16 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
+/* Estilo para el área de texto (textarea) */
 .campo textarea {
     height: 150px;
     resize: vertical;
 }
 
-/* Estilo para el campo de imagen (previsualización) */
+/* Estilo para la previsualización de imágenes */
 .campo img {
     display: block;
     margin-top: 10px;
@@ -56,7 +60,14 @@
     height: auto;
 }
 
-/* Botón de envío */
+/* Previsualización de imagen en edición */
+.campo img {
+    margin-top: 15px;
+    max-width: 80px;
+    border-radius: 4px;
+}
+
+/* Estilos para los botones de acción */
 .boton-enviar {
     background-color: #007bff;
     color: #fff;
@@ -67,6 +78,7 @@
     cursor: pointer;
     width: 100%;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .boton-enviar:hover {
@@ -77,7 +89,7 @@
     background-color: #003d7a;
 }
 
-/* Estilos para los campos de error */
+/* Estilos para los campos con validación */
 .campo input:invalid,
 .campo textarea:invalid {
     border-color: red;
@@ -96,16 +108,139 @@
     outline: none;
 }
 
-/* Mensajes de error (si los necesitas) */
+/* Mensajes de error y éxito */
 .mensaje-error {
     color: red;
     font-size: 14px;
     margin-top: 5px;
 }
 
-/* Mensajes de éxito */
 .mensaje-exito {
     color: green;
     font-size: 14px;
     margin-top: 5px;
+}
+
+/* Mensajes generales de éxito o error */
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estilos para los botones de acción */
+.boton {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Botón para crear un nuevo equipo */
+.boton-crear {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+.boton-crear:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+.boton-crear:active {
+    background-color: #1e7e34; /* Verde aún más oscuro */
+}
+
+/* Botón para editar un equipo */
+.boton-editar {
+    background-color: #ffc107; /* Amarillo */
+    color: black;
+}
+
+.boton-editar:hover {
+    background-color: #e0a800; /* Amarillo más oscuro */
+}
+
+.boton-editar:active {
+    background-color: #c69500; /* Amarillo aún más oscuro */
+}
+
+/* Botón para eliminar un equipo */
+.boton-eliminar {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+.boton-eliminar:active {
+    background-color: #bd2130; /* Rojo aún más oscuro */
+}
+
+/* Estilos para los botones de acción dentro de una tabla */
+.boton-acciones {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.boton-acciones:hover {
+    opacity: 0.8;
+}
+
+.boton-acciones:active {
+    opacity: 0.6;
+}
+
+/* Botones de acción en tabla */
+.boton-editar-tabla {
+    background-color: #ffc107; /* Amarillo */
+    color: black;
+}
+
+.boton-editar-tabla:hover {
+    background-color: #e0a800;
+}
+
+.boton-editar-tabla:active {
+    background-color: #c69500;
+}
+
+.boton-eliminar-tabla {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.boton-eliminar-tabla:hover {
+    background-color: #c82333;
+}
+
+.boton-eliminar-tabla:active {
+    background-color: #bd2130;
 }

@@ -58,6 +58,14 @@
 .equipos h2 {
     text-align: center;
 }
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 
 @media (max-width: 768px) {
     .equipo {

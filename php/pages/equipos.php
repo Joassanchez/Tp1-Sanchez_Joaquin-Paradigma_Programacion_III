@@ -1,7 +1,10 @@
 <section class="container">
-    <h2>Equipos de primera division</h2>
+    <h2>Equipos de primera división</h2>
+    
+    <!-- Barra de búsqueda -->
+    <input type="text" id="search-input" placeholder="Buscar equipo..." class="search-input">
+
     <div class="equipos-grid" id="equipos-grid">
-        
         <?php 
             // Realizar la consulta para obtener los equipos activos
             $sql = "SELECT * FROM equipos WHERE estatus = 1";
@@ -34,7 +37,7 @@
         ?>
         
         <!-- Renderizamos el artículo con la información del equipo -->
-        <article class="equipo">
+        <article class="equipo" data-nombre="<?php echo strtolower($nombre); ?>">
             <img src="<?php echo htmlspecialchars($img); ?>" alt="Logo <?php echo htmlspecialchars($nombre); ?>" />
             <h3><?php echo htmlspecialchars($nombre); ?></h3>
             <p> Ciudad: <?php echo htmlspecialchars($ciudad); ?></p>
@@ -48,3 +51,11 @@
         ?>
     </div>
 </section>
+
+<!-- Importamos el archivo JavaScript -->
+<script type="module">
+    import { filterTeams } from './path/to/searchTeams.js'; // Asegúrate de que la ruta sea correcta
+
+    // Llamamos a la función para activar la búsqueda
+    filterTeams();
+</script>

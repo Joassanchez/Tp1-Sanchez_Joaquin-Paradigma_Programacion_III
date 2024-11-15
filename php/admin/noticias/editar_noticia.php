@@ -2,6 +2,7 @@
 include '../utils/conexion.php';
 conectar();
 
+// Verificar si se ha especificado el ID de la noticia
 if (!isset($_GET['id'])) {
     header("Location: admin_dashboard.php?modulo=noticias&accion=listar");
     exit();
@@ -12,12 +13,13 @@ $query = "SELECT * FROM noticias WHERE id = $id";
 $result = mysqli_query($con, $query);
 
 if (mysqli_num_rows($result) == 0) {
-    echo "Noticia no encontrada.";
+    echo "<p class='error'>Noticia no encontrada.</p>";
     exit();
 }
 
 $noticia = mysqli_fetch_assoc($result);
 
+// Procesar el formulario cuando se envíe
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $titulo = mysqli_real_escape_string($con, $_POST['titulo']);
     $descripcion = mysqli_real_escape_string($con, $_POST['descripcion']);
@@ -32,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $img = $target_file; // Asignamos la nueva ruta de la imagen
     }
 
+    // Actualizar la noticia en la base de datos
     $query_update = "UPDATE noticias SET 
                         titulo = '$titulo', 
                         img = '$img', 
@@ -43,25 +46,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: admin_dashboard.php?modulo=noticias&accion=listar&success=noticia_editada");
         exit();
     } else {
-        echo "Error al editar la noticia: " . mysqli_error($con);
+        echo "<p class='error'>Error al editar la noticia: " . mysqli_error($con) . "</p>";
     }
 }
 ?>
 
-<h2>Editar Noticia</h2>
-<form method="POST" enctype="multipart/form-data">
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo" value="<?php echo htmlspecialchars($noticia['titulo']); ?>" required>
+<div class="contenedor-centrado">
+    <h2>Editar Noticia</h2>
+    <form method="POST" enctype="multipart/form-data" class="formulario">
+        <div class="campo">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" value="<?php echo htmlspecialchars($noticia['titulo']); ?>" required>
+        </div>
 
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" required><?php echo htmlspecialchars($noticia['descripcion']); ?></textarea>
+        <div class="campo">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required><?php echo htmlspecialchars($noticia['descripcion']); ?></textarea>
+        </div>
 
-    <label for="img">Imagen:</label>
-    <input type="file" id="img" name="img">
-    <img src="<?php echo htmlspecialchars($noticia['img']); ?>" style="width: 50px;" alt="Imagen actual">
+        <div class="campo">
+            <label for="img">Imagen:</label>
+            <input type="file" id="img" name="img">
+            <img src="../<?php echo htmlspecialchars($noticia['img']); ?>" style="width: 50px; margin-top: 10px;" alt="Imagen actual">
+        </div>
 
-    <label for="estatus">Activo:</label>
-    <input type="checkbox" id="estatus" name="estatus" <?php echo ($noticia['estatus'] == 1) ? 'checked' : ''; ?>>
+        <div class="campo">
+            <label for="estatus">Activo:</label>
+            <input type="checkbox" id="estatus" name="estatus" <?php echo ($noticia['estatus'] == 1) ? 'checked' : ''; ?>>
+        </div>
 
-    <button type="submit">Actualizar Noticia</button>
-</form>
+        <button type="submit" class="boton-enviar">Actualizar Noticia</button>
+    </form>
+</div>

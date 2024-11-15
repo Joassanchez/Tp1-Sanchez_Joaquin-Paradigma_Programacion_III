@@ -24,24 +24,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: admin_dashboard.php?modulo=noticias&accion=listar&success=noticia_creada");
         exit();
     } else {
-        echo "Error al crear la noticia: " . mysqli_error($con);
+        echo "<p class='error'>Error al crear la noticia: " . mysqli_error($con) . "</p>";
     }
 }
 ?>
 
-<h2>Crear Nueva Noticia</h2>
-<form method="POST" enctype="multipart/form-data">
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo" required>
+<div class="contenedor-centrado">
+    <h2>Crear Nueva Noticia</h2>
+    <form method="POST" enctype="multipart/form-data" class="formulario">
+        <div class="campo">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+        </div>
 
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" required></textarea>
+        <div class="campo">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
 
-    <label for="img">Imagen:</label>
-    <input type="file" id="img" name="img">
+        <div class="campo">
+            <label for="img">Imagen:</label>
+            <input type="file" id="img" name="img">
+        </div>
 
-    <label for="estatus">Activo:</label>
-    <input type="checkbox" id="estatus" name="estatus" checked> 
+        <div class="campo">
+            <label for="estatus">Activo:</label>
+            <input type="checkbox" id="estatus" name="estatus" checked> 
+        </div>
 
-    <button type="submit">Crear Noticia</button>
-</form>
+        <button type="submit" class="boton-enviar">Crear Noticia</button>
+    </form>
+</div>

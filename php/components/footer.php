@@ -4,13 +4,14 @@
     <div class="footer-redes">
       <h3>Síguenos</h3>
       <a href="https://www.facebook.com/futbolargentino" target="_blank" aria-label="Facebook">
-        <img src="Icons/facebook-icon.svg" alt="Facebook" />
+        <img src="img/icons/facebook.svg" alt="Facebook" />
       </a>
       <a href="https://www.twitter.com/futbolargentino" target="twiiter" aria-label="Twitter">
-        <img src="../img/icons/twitter." alt="Twitter" />
+        <img src="img/icons/twitter.svg" alt="Twitter" />
+        
       </a>
       <a href="https://www.instagram.com/futbolargentino" target="_blank" aria-label="Instagram">
-        <img src="Icons/instagram-icon.svg" alt="Instagram" />
+        <img src="img/icons/instagram.svg" alt="Instagram" />
       </a>
     </div>
 

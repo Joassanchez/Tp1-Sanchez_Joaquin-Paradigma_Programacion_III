@@ -29,7 +29,7 @@ if (isset($_GET['delete'])) {
 ?>
 
 <h2>Lista de Noticias</h2>
-<a href="admin_dashboard.php?modulo=noticias&accion=crear">Crear Nueva Noticia</a>
+<a href="admin_dashboard.php?modulo=noticias&accion=crear" class="boton boton-crear">Crear Nueva Noticia</a>
 
 <?php if (mysqli_num_rows($result) > 0): ?>
     <table border="1">
@@ -44,12 +44,12 @@ if (isset($_GET['delete'])) {
         <tbody>
             <?php while ($noticia = mysqli_fetch_assoc($result)): ?>
                 <tr>
-                    <td><img src="<?php echo htmlspecialchars($noticia['img']); ?>" style="width: 50px;" alt="Imagen de la noticia"></td>
+                    <td><img src="../<?php echo htmlspecialchars($noticia['img']); ?>" style="width: 50px;" alt="Imagen de la noticia"></td>
                     <td><?php echo htmlspecialchars($noticia['titulo']); ?></td>
                     <td><?php echo htmlspecialchars($noticia['descripcion']); ?></td>
                     <td>
-                        <a href="admin_dashboard.php?modulo=noticias&accion=editar&id=<?php echo $noticia['id']; ?>">Editar</a>
-                        <a href="admin_dashboard.php?modulo=noticias&accion=listar&delete=<?php echo $noticia['id']; ?>" onclick="return confirm('¿Estás seguro de eliminar esta noticia?')">Eliminar</a>
+                        <a href="admin_dashboard.php?modulo=noticias&accion=editar&id=<?php echo $noticia['id']; ?>" class="boton boton-editar">Editar</a>
+                        <a href="admin_dashboard.php?modulo=noticias&accion=listar&delete=<?php echo $noticia['id']; ?>" class="boton boton-eliminar" onclick="return confirm('¿Estás seguro de eliminar esta noticia?')">Eliminar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>

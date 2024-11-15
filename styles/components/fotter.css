@@ -1,5 +1,7 @@
 @import url(../root.css);
-footer {
+
+/* Estilos generales del footer */
+.footer {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
@@ -8,4 +10,43 @@ footer {
   width: 100%;
   clear: both; 
   box-sizing: border-box;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espacio entre los iconos */
+  margin-bottom: 20px;
+}
+
+.footer-redes h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Estilos para los iconos de las redes sociales */
+.footer-redes a img {
+  width: 40px; /* Ajusta el tamaño del icono */
+  height: 40px; /* Asegura que la imagen mantenga la proporción */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease; /* Animación para el hover */
+}
+
+.footer-redes a img:hover {
+  transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilos para el copyright */
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-style: italic;
 }
